@@ -1,0 +1,293 @@
+#include <stdio.h>  //代码块                  //printf打印函数，scanf输入函数
+
+void one_three();
+void two();
+int main(void)
+{	
+	printf("starting now\n");
+	one_three();
+	printf("done!");
+	return 0;
+}
+void one_three()
+{
+	printf("one\n");
+	two();
+	printf("three\n");
+}
+void two()
+{
+	printf("two\n");
+}
+//#include<string.h>
+//struct Book
+//{	char name[20];
+//	short price;
+//};
+//int main()
+//{	struct Book b1 = {"C语言程序设计", 55};
+//	struct Book* pb = &b1;
+//	printf("%s\n", pb->name);
+//	printf("%d\n", pb->price);
+//	strcpy(b1.name, "C++");
+//	printf("%s\n", (*pb). name);
+//	printf("%d\n", (*pb). price);
+//	/*printf("书名:%s\n", b1.name);
+//	printf("价格:%d\n", b1.price);*/
+//	return 0;
+//}
+//int main()
+//{	double d = 3.14;
+//	double* pd = &d;
+//	*pd = 5.5;
+//	printf("%lf\n", *pd);
+//	printf("%lf\n", d);
+//	return 0;
+//}
+//int main()
+//{
+//	char ch = 'w';
+//	char* pc = &ch;
+//	//*pc = 'a';
+//	//printf("%C\n",ch);
+//	printf("%d\n", sizeof(pc));
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 10;
+//	int *p = &a;//存放地址的变量为指针变量
+//	printf("%p\n", &a);
+//	*p=20;//*解引用操作符
+//	printf("a = %d\n", a);
+//	
+//	return 0;
+//}
+////int Max(int a,int b)函数
+////{	if(a>b)
+////		return a;
+////	else
+////		return b;
+////}
+//#define Max(x, y) (x>y?x:y)//宏
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	/*int max = Max(a, b);
+//	printf("max = %d\n", max);*/
+//	int max = Max(a, b);
+//	printf("max = %d\n", max);
+//	return 0;
+//}
+//int main()
+//{	extern int Add(int, int);
+//	int x = 10;
+//	int y = 20;
+//	int z = Add(x, y);
+//	printf("z = %d\n", z);
+//	return 0;
+//
+//}
+//int main()
+//{
+//	extern int g_val;
+//	printf("g_val = %d\n", g_val);
+//	return 0;
+//}
+//void test()            //static修饰局部变量（生命周期变长）
+//{
+//	static int a = 1;
+//	a++;
+//	printf("a = %d\n", a);
+//}
+//int main()
+//{	int i = 0;
+//	while(i<5)
+//	{
+//		test();
+//		i++;
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	typedef unsigned int qint;
+//	unsigned int num = 20;
+//	qint num2 = 20;//typedef  类型定义（别名）
+//	return 0;
+//}
+//int main()
+//{	int a = 10;          //正数的原码补码反码都相同                          负数：补码为反码+1	    直接正负与二进制得原码           补码为反码+1         0正1负
+//	int b = 20;			//-2      原码:10000000000000000000000000000010          反码：11111111111111111111111111111101         补码:11111111111111111111111111111110
+//	int max = 0;
+//	max = (a > b ? a : b);             
+//	if(a>b)
+//		printf("%d\n", max = a);
+//	else
+//		printf("%d\n", max = b);
+//	return 0;
+//}
+//int main()		//&&逻辑与（并且）  ||逻辑或
+//{	int a = 3;	//0为假，其余为真
+//	int b = 5;
+//	int c = a&&b;
+//	printf("c = %d\n", c);
+//
+//	return 0;
+//}
+//int main()
+//{	int a = 10;
+//	int b = a++;
+//	printf("a = %d b = %d\n", a, b);
+//	return 0;
+//}
+//int main()
+//{	int a = 0;
+//	int b = ~a;
+//	printf("%d\n", b);
+//	return 0;
+//}
+//int main()
+//{   int arr[10] = {0};
+//	int sz = 0;
+//	printf("%d\n", sizeof(arr));
+//	sz = sizeof(arr)/sizeof(arr[0]);
+//	printf("sz = %d\n", sz);
+//	return 0;
+//}
+//int main()
+//{	int a = 3;//011
+//	int b = 5;//101            &按位与  |按位或  ^按位异或
+//	int c = a&b;
+//	printf("%d\n" ,c);
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 1;
+//	//00000000000000000000000000000001
+//	int b = a<<1;
+//	printf("%d\n", b);
+//	return 0;
+//
+//}
+//int main()
+//{
+//	int arr[10] = {1,2,3,4,5,6,7,8,9,0};
+//	/*printf("%d\n", arr[4]);*/
+//	int i = 0;
+//	while(i<10)
+//	{
+//		printf("%d\n", arr[i]);
+//		i++;
+//	
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int line = 0;
+//	printf("成为仆人\n");
+//	while(line<10)
+//	{
+//	printf("赞美皇子: %d\n", line);
+//	line++;
+//	}
+//	if(line>=10)
+//	printf("吆西\n");
+//	return 0;
+//
+//
+//}
+//int main()
+//{	int input = 0;
+//	printf("加入超党\n");
+//	printf("信超哥吗？(1/0)>:");
+//	scanf("%d", &input);
+//	if(input == 1)
+//		printf("得永生");
+//	else
+//		printf("喝鸡汤");
+//	return 0;
+//}
+//int main()
+//{
+//	printf("%d\n", strlen("c:\test\32\test.c"));// \32为八进制，\x61为16进制
+//	printf("%c\n", '\x61');
+//	return 0;
+//}
+//{
+//	char arr1[] = "abc";
+//	char arr2[] = {'a','b','c', 0};//字符串结束标志--\0
+//	printf("%s\n", arr1);
+//	printf("%s\n", arr2);
+//	printf("%d\n", strlen(arr1));
+//	printf("%d\n", strlen(arr2));
+//	return 0;
+//}
+//enum Sex
+//{	
+//	FEMALE,
+//	MALE,
+//	SECRET
+//};
+//int main()
+//{	
+//	/*enum Sex s = FEMALE;*/
+//	printf("%d\n", MALE);
+//	printf("%d\n", SECRET);
+//	printf("%d\n", FEMALE);
+//	return 0;
+//}
+//#define MAX 10
+//{	                                    枚举关键-enum
+//	int arr[MAX] = {0};
+//	printf("%d\n", MAX);
+//	return 0;
+//}
+//{	const int num = 4;//const常属性
+//	printf("%d\n", num);
+//	num = 8;
+//	printf("%d\n", num);
+//	/*3;*///字面常量
+//	return 0;
+//}
+//int global = 2022;
+///*int num1 = 20;*///全局变量(次要）                            //&取地址符号
+//void test()
+//{
+//	printf("test()--%d\n", global);
+//}
+//int main()
+//{
+//		test();
+//			printf("%d\n", global);
+//			return 0;
+//}
+//int Add(int x,int y)
+//{
+//	int z = x+y;
+//	return z;
+//
+//}
+//int main()
+//{
+//	int num1 = 0;
+//	int num2 = 0;
+//	int sum = 0;
+//	scanf_s("%d%d", &num1, &num2);
+//	//sum = num1 + num2;
+//	sum = Add(num1, num2);
+//	printf("sum = %d\n", sum);
+//	return 0;
+//}
+//{	int num2 = 10;//局部变量(优先)
+//	printf("%d\n", num1);
+//
+//		return 0;
+
+//}
+	/*short age =20;
+	double weight = 95.6;
+			return 0;*/
